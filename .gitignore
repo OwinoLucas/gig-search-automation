@@ -1,0 +1,48 @@
+# Python-specific ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env/
+env/
+venv/
+lib/
+lib64/
+include/
+bin/
+share/
+*.egg-info/
+.installed.cfg
+.pytest_cache/
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.ipynb_checkpoints
+.mypy_cache/
+.vscode/ # VS Code specific temporary files
+
+# Operating System files
+.DS_Store # macOS
+.envrc # direnv environment loading
+.vscode/ # Visual Studio Code
+.zed/
+*.log # Log files
+Thumbs.db # Windows
+ehthumbs.db # Windows
+Desktop.ini # Windows
+
+# Project-specific ignores
+.env                # Contains sensitive credentials and local config
+*.db                # SQLite database file (e.g., jobs.db)
+data/               # Generally ignore raw data files if they are generated or very large
+# Exception for resume file if you want to include it in repo (be cautious)
+!data/resume.pdf # If you want to commit your resume, uncomment this and name it specifically
+# or more generally, if you only want to commit specific data files, ignore the directory and then un-ignore specific files
+# data/*
+# !data/placeholder_for_resume.txt
+
+# Selenium specific logs/temp files
+geckodriver.log
+chromedriver.log
